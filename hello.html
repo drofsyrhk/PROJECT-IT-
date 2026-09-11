@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crave — Food Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="hello.css">
+    <script src="hello.js"></script>
+</body>
+</html>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="nav-inner">
+
+            <a href="#" class="logo">Crave<span>.</span></a>
+
+            <nav class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- first page -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">GOOD FOOD. GOOD MOOD.</p>
+
+            <h1>
+                Crave<br>
+                <span>House.</span>
+            </h1>
+
+            <p class="hero-text">
+                Fresh, delicious and affordable food made for every kind of craving.
+            </p>
+
+            <a href="#menu" class="hero-button">
+                Order now ↓
+            </a>
+
+        </div>
+
+        <div class="hero-food">
+            <div class="food-circle">
+                
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Category -->
+    <section class="categories" id="menu">
+
+        <div class="section-header">
+            <p class="eyebrow">OUR MENU</p>
+            <h2>Pick your craving.</h2>
+        </div>
+
+        <div class="category-buttons">
+
+            <button onclick="filterProducts('all')" class="active">
+                All
+            </button>
+
+            <button onclick="filterProducts('burger')">
+                🍔Burgers
+            </button>
+
+            <button onclick="filterProducts('footlong')">
+                🌭 Footlong
+            </button>
+
+            <button onclick="filterProducts('rice')">
+                🍚 Fried Rice
+            </button>
+
+            <button onclick="filterProducts('sides')">
+                🍟 Sides
+            </button>
+
+            <button onclick="filterProducts('drinks')">
+                🥤 Drinks
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products">
+
+        <div class="product-grid" id="productGrid">
+
+            <!-- BURGER -->
+            <article class="product-card" data-category="burger"
+                onclick="showProduct(1)">
+
+                <div class="product-image burger">
+                    🍔
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">BURGER</p>
+
+                    <h3>Classic Burger</h3>
+
+                    <p class="description">
+                        Juicy beef patty with cheese and fresh vegetables.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱99</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(1)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CHEESEBURGER -->
+            <article class="product-card" data-category="burger"
+                onclick="showProduct(2)">
+
+                <div class="product-image cheeseburger">
+                    🍔
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">BURGER</p>
+
+                    <h3>Cheese Burger</h3>
+
+                    <p class="description">
+                        Double cheese, juicy beef and our special sauce.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱119</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(2)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FOOTLONG -->
+            <article class="product-card" data-category="footlong"
+                onclick="showProduct(3)">
+
+                <div class="product-image footlong">
+                    🌭
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">FOOTLONG</p>
+
+                    <h3>Classic Footlong</h3>
+
+                    <p class="description">
+                        Delicious sausage with cheese and special sauce.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱89</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(3)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRIED RICE -->
+            <article class="product-card" data-category="rice"
+                onclick="showProduct(4)">
+
+                <div class="product-image rice">
+                    🍚
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">FRIED RICE</p>
+
+                    <h3>Special Fried Rice</h3>
+
+                    <p class="description">
+                        Flavorful fried rice with egg, vegetables and meat.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱79</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(4)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRIES -->
+            <article class="product-card" data-category="sides"
+                onclick="showProduct(5)">
+
+                <div class="product-image fries">
+                    🍟
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">SIDE</p>
+
+                    <h3>French Fries</h3>
+
+                    <p class="description">
+                        Crispy golden fries with our signature seasoning.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱59</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(5)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DRINK -->
+            <article class="product-card" data-category="drinks"
+                onclick="showProduct(6)">
+
+                <div class="product-image drink">
+                    🥤
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">DRINK</p>
+
+                    <h3>Cold Soda</h3>
+
+                    <p class="description">
+                        Ice-cold refreshing soda to complete your meal.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>₱10000</strong>
+
+                        <button onclick="event.stopPropagation(); addToCart(6)">
+                            +
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+<!-- about-->
+
+    <section class="about" id="about">
+
+        <div>
+            <p class="eyebrow">WHY CRAVE?</p>
+
+            <h2>
+                Simple food.<br>
+                Big flavor.
+            </h2>
+        </div>
+
+        <p>
+            We believe good food doesn't have to be complicated.
+            Crave serves affordable comfort food made for students,
+            families and anyone looking for a satisfying meal.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <p class="eyebrow">HAVE A QUESTION?</p>
+
+        <h2>Let's talk.</h2>
+
+        <p>Message us for orders, questions and special requests.</p>
+
+        <a href="mailto:hello@crave.com">
+            hello@crave.com
+        </a>
+
+    </section>
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal" id="productModal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeProduct()">
+                ×
+            </button>
+
+            <div class="modal-image" id="modalImage">
+                🍔
+            </div>
+
+            <div class="modal-info">
+
+                <p class="product-category" id="modalCategory">
+                    BURGER
+                </p>
+
+                <h2 id="modalName">
+                    Classic Burger
+                </h2>
+
+                <p id="modalDescription">
+                    Delicious burger.
+                </p>
+
+                <h3 id="modalPrice">
+                    ₱99
+                </h3>
+
+                <div class="quantity">
+
+                    <button onclick="changeQuantity(-1)">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button onclick="changeQuantity(1)">
+                        +
+                    </button>
+
+                </div>
+
+                <button class="add-button" onclick="addModalToCart()">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CART -->
+    <div class="cart-modal" id="cartModal">
+
+        <div class="cart-content">
+
+            <div class="cart-header">
+
+                <h2>Your Cart</h2>
+
+                <button onclick="closeCart()">
+                    ×
+                </button>
+
+            </div>
+
+            <div id="cartItems">
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    ₱0
+                </strong>
+
+            </div>
+
+            <button class="checkout" onclick="checkout()">
+                Place Order
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- last -->
+    <footer>
+
+        <strong>Crave<span>.</span></strong>
+
+        <p>© 2026 Crave Food Store</p>
+
+    </footer>
+
+
+</body>
+</html>
