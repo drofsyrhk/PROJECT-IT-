@@ -1,14 +1,12 @@
-// ==============================
-// PRODUCTS
-// ==============================
+//Products
 
 const products = [
     {
         id: 1,
         name: "Classic Burger",
-        price: 99,
+        price: 1000,
         category: "Burger",
-        image: "🍔",
+        image: "CLASSIC BURGER.jpg",
         description: "Juicy beef patty with cheese, fresh vegetables and our special sauce."
     },
 
@@ -17,7 +15,7 @@ const products = [
         name: "Cheese Burger",
         price: 119,
         category: "Burger",
-        image: "🍔",
+        image: "chess burger.jpg",
         description: "A delicious burger with double cheese, juicy beef and special sauce."
     },
 
@@ -26,25 +24,25 @@ const products = [
         name: "Classic Footlong",
         price: 89,
         category: "Footlong",
-        image: "🌭",
+        image: "footlong.avif",
         description: "Delicious sausage with cheese, vegetables and special sauce."
     },
 
     {
         id: 4,
-        name: "Special Fried Rice",
-        price: 79,
-        category: "Fried Rice",
-        image: "🍚",
-        description: "Flavorful fried rice with egg, vegetables and meat."
+        name: "Chicken BBQ",
+        price: 89,
+        category: "Chicken",
+        image: "chicken.avif",
+        description: "Flavorful fried chicken with BBQ sauce, and vegetables."
     },
 
     {
         id: 5,
         name: "French Fries",
-        price: 59,
+        price: 6969,
         category: "sides",
-        image: "🍟",
+        image: "french fries.jpg",
         description: "Crispy golden fries with our signature seasoning."
     },
 
@@ -53,22 +51,18 @@ const products = [
         name: "Cold Soda",
         price: 10000,
         category: "Drinks",
-        image: "🥤",
+        image: "cold soda.jpg",
         description: "Ice-cold refreshing soda to complete your meal."
     }
 ];
 
 
-// ==============================
-// CART
-// ==============================
+        //cart
 
 let cart = [];
 
 
-// ==============================
-// SHOW PRODUCT DETAILS
-// ==============================
+    //Show Product details
 
 let selectedProduct = null;
 let quantity = 1;
@@ -79,8 +73,8 @@ function showProduct(id) {
 
     quantity = 1;
 
-    document.getElementById("modalImage").textContent =
-        selectedProduct.image;
+    document.getElementById("modalImage").innerHTML =
+        `<img src="${selectedProduct.image}" alt="${selectedProduct.name}">`;
 
     document.getElementById("modalCategory").textContent =
         selectedProduct.category;
@@ -100,10 +94,7 @@ function showProduct(id) {
     document.getElementById("productModal").classList.add("show");
 }
 
-
-// ==============================
-// CLOSE PRODUCT
-// ==============================
+//close product
 
 function closeProduct() {
 
@@ -113,9 +104,7 @@ function closeProduct() {
 }
 
 
-// ==============================
-// CHANGE QUANTITY
-// ==============================
+//change quantity
 
 function changeQuantity(amount) {
 
@@ -129,9 +118,7 @@ function changeQuantity(amount) {
 }
 
 
-// ==============================
-// ADD PRODUCT TO CART
-// ==============================
+    //add product to cart
 
 function addToCart(id) {
 
@@ -346,24 +333,29 @@ function filterProducts(category) {
 // CHECKOUT
 // ==============================
 
+function showToast(message, isError = false) {
+    const toast = document.getElementById("toast");
+    const toastMessage = document.getElementById("toast-message");
+
+    toastMessage.textContent = message;
+    toast.classList.toggle("error", isError);
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}
+
 function checkout() {
-
     if (cart.length === 0) {
-
-        alert("Your cart is empty!");
-
+        showToast("Your cart is empty!", true);
         return;
     }
 
-
-    alert(
-        "Thank you for your order! Your food is being prepared."
-    );
-
+    showToast("Thank you for your order! Your food is being prepared.");
 
     cart = [];
-
     updateCart();
-
     closeCart();
 }

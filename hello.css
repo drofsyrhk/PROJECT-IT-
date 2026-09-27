@@ -1,12 +1,12 @@
-/* basics */
+/*1st page background*/
 
 :root {
     --background: #f5f1e8;
-    --white: #ffffff;
-    --black: #171717;
-    --gray: #666;
-    --accent: #ff5a1f;
-    --light-orange: #ffe1d4;
+    --white: #ffffff; 
+    --black: #171717;  /*all black front*/
+    --gray: #666;      /*all gray front*/
+    --accent: #ff5a1f; /*all orange front*/
+    --light-orange: #ffe1d4;    /*circle*/
 }
 
 * {
@@ -17,11 +17,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/*font for CRAVE HOUSE 1st PAGE*/
+
 body {
     margin: 0;
     background: var(--background);
     color: var(--black);
-    font-family: "Archivo", sans-serif;
+    font-family: "archivo", sans-serif;
 }
 
 a {
@@ -43,7 +45,6 @@ button {
     z-index: 100;
     padding: 20px 30px;
     background: rgba(245, 240, 228, 0.85);
-    backdrop-filter: blur(12px);
 }
 
 .nav-inner {
@@ -54,7 +55,7 @@ button {
     align-items: center;
     justify-content: space-between;
 }
-
+      /*CRAVE*/
 .logo {
     font-size: 26px;
     font-weight: 900;
@@ -64,6 +65,8 @@ button {
 footer span {
     color: var(--accent);
 }
+
+/*menu about conatct*/
 
 .nav-links {
     display: flex;
@@ -78,6 +81,8 @@ footer span {
 .nav-links a:hover {
     color: var(--accent);
 }
+
+/*CART*/
 
 .cart-button {
     border: none;
@@ -98,9 +103,7 @@ footer span {
 }
 
 
-/* ==============================
-   HERO
-================================= */
+/*HERO(spacing 1st page inner)*/
 
 .hero {
     min-height: 100vh;
@@ -114,13 +117,14 @@ footer span {
     align-items: center;
     gap: 40px;
 }
-
+    /*Good mood good food*/
 .eyebrow {
     color: var(--accent);
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
+/*font size for Crave house*/
 
 .hero h1 {
     font-size: clamp(60px, 9vw, 110px);
@@ -134,12 +138,15 @@ footer span {
     color: var(--accent);
 }
 
+/*text below crave house*/
+
 .hero-text {
     max-width: 480px;
     color: var(--gray);
     font-size: 18px;
     line-height: 1.6;
 }
+    /*order Button*/
 
 .hero-button {
     display: inline-block;
@@ -166,6 +173,8 @@ footer span {
     justify-content: center;
 }
 
+/*design for the circle */
+
 .food-circle {
     width: min(430px, 80vw);
     height: min(430px, 80vw);
@@ -185,15 +194,14 @@ footer span {
 }
 
 
-/* ==============================
-   CATEGORY
-================================= */
+/*CATEGORY*/
 
 .categories {
     max-width: 1180px;
     margin: auto;
     padding: 100px 30px 30px;
 }
+/*PICK YOURE CRAVING*/
 
 .section-header h2 {
     font-size: 50px;
@@ -220,16 +228,14 @@ footer span {
 .category-buttons button:hover,
 .category-buttons button.active {
     background: var(--black);
-    color: white;
+    color: rgb(252, 249, 249);
 }
 
 
-/* ==============================
-   PRODUCTS
-================================= */
+/*PRODUCTS*/
 
 .products {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: auto;
     padding: 30px 30px 120px;
 }
@@ -239,6 +245,7 @@ footer span {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+/*product lower background size*/
 
 .product-card {
     background: var(--white);
@@ -250,10 +257,12 @@ footer span {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/*transition of product on click*/
 .product-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+/*product upper background size*/
 
 .product-image {
     height: 240px;
@@ -264,34 +273,21 @@ footer span {
 
     font-size: 110px;
 }
+/*All food image*/
 
-.burger {
-    background: #ffe0d2;
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.cheeseburger {
-    background: #fff0c9;
-}
 
-.footlong {
-    background: #dff0d4;
-}
-
-.rice {
-    background: #f5dfb8;
-}
-
-.fries {
-    background: #ffe5a8;
-}
-
-.drink {
-    background: #d8e9ff;
-}
+/*size for the details of product*/
 
 .product-info {
     padding: 25px;
 }
+/*size for product category(orange)*/
 
 .product-category {
     font-size: 11px;
@@ -299,6 +295,7 @@ footer span {
     font-weight: 800;
     letter-spacing: 0.08em;
 }
+/*name of the product(black)*/
 
 .product-info h3 {
     font-size: 24px;
@@ -310,6 +307,7 @@ footer span {
     line-height: 1.5;
     font-size: 14px;
 }
+/*price*/
 
 .product-bottom {
     display: flex;
@@ -318,10 +316,12 @@ footer span {
 
     margin-top: 20px;
 }
+/*price size*/
 
 .product-bottom strong {
     font-size: 22px;
 }
+/*add to cart buton*/
 
 .product-bottom button {
     width: 42px;
@@ -341,16 +341,12 @@ footer span {
 }
 
 
-/* ==============================
-   ABOUT
-================================= */
+    /*ABOUT*/
 
 .about {
     background: var(--black);
-    color: white;
-
+    color: rgb(245, 245, 245);      /*simple food big flavor*/
     padding: 110px 30px;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -372,24 +368,23 @@ footer span {
 }
 
 
-/* ==============================
-   CONTACT
-================================= */
+/*CONTACT*/
 
 .contact {
     padding: 120px 30px;
     text-align: center;
 }
-
+/*LETS TALK*/
 .contact h2 {
     font-size: 70px;
     margin: 15px 0;
 }
 
 .contact p {
-    color: var(--gray);
+    color: var(--grey); /*paragraph*/
 }
 
+/*helo@cracvve.*/
 .contact a {
     display: inline-block;
     margin-top: 20px;
@@ -401,9 +396,7 @@ footer span {
 }
 
 
-/* ==============================
-   PRODUCT MODAL
-================================= */
+/*PRODUCT MODAL*/
 
 .modal {
     position: fixed;
@@ -423,7 +416,7 @@ footer span {
 .modal.show {
     display: flex;
 }
-
+/*modal pic right side*/
 .modal-content {
     width: min(850px, 100%);
 
@@ -437,7 +430,7 @@ footer span {
 
     position: relative;
 }
-
+/*closed button*/
 .close {
     position: absolute;
     right: 20px;
@@ -451,16 +444,21 @@ footer span {
     z-index: 2;
 }
 
+/*modal pic left side*/
+
 .modal-image {
     min-height: 450px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--light-orange);
-
     font-size: 150px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .modal-info {
@@ -476,11 +474,11 @@ footer span {
     color: var(--gray);
     line-height: 1.6;
 }
-
+/*price*/
 .modal-info h3 {
     font-size: 28px;
 }
-
+/*quantity spacing*/
 .quantity {
     display: flex;
     align-items: center;
@@ -488,7 +486,7 @@ footer span {
 
     margin: 25px 0;
 }
-
+/*button*/
 .quantity button {
     width: 40px;
     height: 40px;
@@ -504,7 +502,7 @@ footer span {
 .quantity span {
     font-weight: 700;
 }
-
+/*add to cart button*/
 .add-button,
 .checkout {
     width: 100%;
@@ -526,15 +524,13 @@ footer span {
 }
 
 
-/* ==============================
-   CART
-================================= */
+/*INSIDE CART*/
 
 .cart-modal {
     position: fixed;
     inset: 0;
 
-    background: rgba(20, 20, 20, 0.938);
+    background: rgba(225, 225, 225, 0.5);
 
     display: none;
 
@@ -547,8 +543,9 @@ footer span {
     display: flex;
 }
 
+/*INSIDE CART SIZE*/
 .cart-content {
-    width: min(430px, 100%);
+    width: min(600px, 100%);
     background: var(--background);
 
     height: 100%;
@@ -563,17 +560,18 @@ footer span {
     justify-content: space-between;
     align-items: center;
 }
-
+/*YOURE CART*/
 .cart-header h2 {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .cart-header button {
     border: none;
-    background: none;
+    background: none;    /*exit button*/
     font-size: 30px;
 }
 
+/*add to cart item*/
 .cart-item {
     background: white;
     padding: 18px;
@@ -588,7 +586,7 @@ footer span {
 }
 
 .cart-item h4 {
-    margin: 0 0 5px;
+    margin: 0 0 10px;       /*spacing*/
 }
 
 .cart-item p {
@@ -596,10 +594,11 @@ footer span {
     color: var(--gray);
 }
 
+        /*(-)(+)*/
 .cart-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px;   
 }
 
 .cart-controls button {
@@ -612,7 +611,7 @@ footer span {
     background: var(--black);
     color: white;
 }
-
+        /*TOTAL*/
 .cart-total {
     border-top: 1px solid #ccc;
 
@@ -628,13 +627,11 @@ footer span {
 .empty-cart {
     color: var(--gray);
     text-align: center;
-    margin-top: 60px;
+    margin-top: 60px;      /*space*/
 }
 
 
-/* ==============================
-   FOOTER
-================================= */
+/*FOOTER*/
 
 footer {
     padding: 30px;
@@ -647,13 +644,10 @@ footer {
 }
 
 footer strong {
-    color: var(--black);
+    color: var(--black);    /*CRAVE LOWER SIDE*/
 }
 
-
-/* ==============================
-   MOBILE
-================================= */
+/*SHRINKING SIZE*/
 
 @media (max-width: 800px) {
 
@@ -726,4 +720,33 @@ footer strong {
     footer {
         flex-direction: column;
     }
+}
+
+
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #2ecc71;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.toast.error {
+  background: #e74c3c;
 }

@@ -13,7 +13,9 @@
 
     <link rel="stylesheet" href="hello.css">
     <script src="hello.js"></script>
+
 </body>
+
 </html>
 </head>
 
@@ -86,7 +88,7 @@
             </button>
 
             <button onclick="filterProducts('burger')">
-                🍔Burgers
+                🍔 Burgers
             </button>
 
             <button onclick="filterProducts('footlong')">
@@ -94,7 +96,7 @@
             </button>
 
             <button onclick="filterProducts('rice')">
-                🍚 Fried Rice
+                🍗 Chicken
             </button>
 
             <button onclick="filterProducts('sides')">
@@ -119,8 +121,9 @@
             <article class="product-card" data-category="burger"
                 onclick="showProduct(1)">
 
-                <div class="product-image burger">
-                    🍔
+                <div class="product-image burger">                  
+                    <img src="./CLASSIC BURGER.jpg" alt="Classic Burger">
+
                 </div>
 
                 <div class="product-info">
@@ -151,7 +154,8 @@
                 onclick="showProduct(2)">
 
                 <div class="product-image cheeseburger">
-                    🍔
+                    <img src="./chess burger.jpg" alt="chesseburger">
+            
                 </div>
 
                 <div class="product-info">
@@ -165,7 +169,7 @@
                     </p>
 
                     <div class="product-bottom">
-                        <strong>₱119</strong>
+                        <strong>₱1000</strong>
 
                         <button onclick="event.stopPropagation(); addToCart(2)">
                             +
@@ -181,9 +185,10 @@
             <article class="product-card" data-category="footlong"
                 onclick="showProduct(3)">
 
-                <div class="product-image footlong">
-                    🌭
-                </div>
+               <div class="product-image footlong"> 
+                    <img src="./footlong.avif" alt="footlong">
+
+               </div>
 
                 <div class="product-info">
 
@@ -208,26 +213,27 @@
             </article>
 
 
-            <!-- FRIED RICE -->
+            <!-- chicken -->
             <article class="product-card" data-category="rice"
                 onclick="showProduct(4)">
 
-                <div class="product-image rice">
-                    🍚
+                <div class="product-image rice"> 
+                    <img src="./chicken.avif" alt="Chicken">
+
                 </div>
 
                 <div class="product-info">
 
-                    <p class="product-category">FRIED RICE</p>
+                    <p class="product-category">Chicken</p>
 
-                    <h3>Special Fried Rice</h3>
+                    <h3>Chicken BBQ</h3>
 
                     <p class="description">
                         Flavorful fried rice with egg, vegetables and meat.
                     </p>
 
                     <div class="product-bottom">
-                        <strong>₱79</strong>
+                        <strong>₱129</strong>
 
                         <button onclick="event.stopPropagation(); addToCart(4)">
                             +
@@ -243,13 +249,15 @@
             <article class="product-card" data-category="sides"
                 onclick="showProduct(5)">
 
-                <div class="product-image fries">
-                    🍟
+                <div class="product-image fries"> 
+                    <img src="./french fries.jpg" alt="french fries">
+
                 </div>
 
                 <div class="product-info">
 
                     <p class="product-category">SIDE</p>
+                    
 
                     <h3>French Fries</h3>
 
@@ -258,7 +266,7 @@
                     </p>
 
                     <div class="product-bottom">
-                        <strong>₱59</strong>
+                        <strong>₱6969</strong>
 
                         <button onclick="event.stopPropagation(); addToCart(5)">
                             +
@@ -275,7 +283,8 @@
                 onclick="showProduct(6)">
 
                 <div class="product-image drink">
-                    🥤
+                    <img src="./cold soda.jpg" alt="cold soda">
+
                 </div>
 
                 <div class="product-info">
@@ -448,6 +457,12 @@
         <p>© 2026 Crave Food Store</p>
 
     </footer>
+
+    
+<div id="toast" class="toast hidden">
+  <p id="toast-message"></p>
+</div>
+
 
 
 </body>
