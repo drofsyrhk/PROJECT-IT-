@@ -139,9 +139,9 @@ function addToCart(id) {
 }
 
 
-// ==============================
+
 // ADD FROM PRODUCT MODAL
-// ==============================
+
 
 function addModalToCart() {
 
@@ -166,9 +166,9 @@ function addModalToCart() {
 }
 
 
-// ==============================
+
 // UPDATE CART
-// ==============================
+
 
 function updateCart() {
 
@@ -240,9 +240,9 @@ function updateCart() {
 }
 
 
-// ==============================
+
 // CHANGE CART QUANTITY
-// ==============================
+
 
 function changeCartQuantity(id, amount) {
 
@@ -265,9 +265,9 @@ function changeCartQuantity(id, amount) {
 }
 
 
-// ==============================
+
 // OPEN CART
-// ==============================
+
 
 function openCart() {
 
@@ -277,9 +277,9 @@ function openCart() {
 }
 
 
-// ==============================
+
 // CLOSE CART
-// ==============================
+
 
 function closeCart() {
 
@@ -289,9 +289,9 @@ function closeCart() {
 }
 
 
-// ==============================
+
 // FILTER PRODUCTS
-// ==============================
+
 
 function filterProducts(category) {
 
@@ -329,9 +329,8 @@ function filterProducts(category) {
 }
 
 
-// ==============================
+
 // CHECKOUT
-// ==============================
 
 function showToast(message, isError = false) {
     const toast = document.getElementById("toast");
